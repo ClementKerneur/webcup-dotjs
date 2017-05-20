@@ -17,6 +17,7 @@
     "browserify": "^14.3.0",
     "cors": "*",
     "ejs": "^2.5.6",
+    "es6-react-mixins": "^0.2.1",
     "express": "*",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
