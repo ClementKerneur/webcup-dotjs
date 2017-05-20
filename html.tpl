@@ -2,6 +2,9 @@
 <html>
 <head>
 	<title>App</title>
+
+	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/landing.css">
 </head>
 <body>
 	<div id="root"><%- content %></div>
