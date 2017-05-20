@@ -5,8 +5,10 @@ import cors from 'cors'
 import passport from 'passport'
 import mongoose from 'mongoose'
 import config from './config/database'
+import ejs from 'ejs'
 
 import Router from './react-src/Router'
+
 import ReactDOMServer from 'react-dom/server'
 import React from 'react'
 import { StaticRouter } from 'react-router'
@@ -35,7 +37,7 @@ const port = process.env.PORT || 8080;
 app.use(cors());
 
 // Set Static Folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/static', express.static(path.join(__dirname, '/../public')));
 
 // Body Parser Middleware
 app.use(bodyParser.json());
@@ -50,8 +52,11 @@ app.use('/users', users);
 
 //SSR React
 app.get('*', (req, res) => {
-	console.log(req.url);
-	res.send(ReactDOMServer.renderToString( <StaticRouter location={req.url} context={{}}><Router /></StaticRouter> ));
+	ejs.renderFile('html.tpl', {
+		content: ReactDOMServer.renderToString( <StaticRouter location={req.url} context={{}}><Router /></StaticRouter> )
+	}, (err, html) => {
+		res.send(html);
+	})
 });
 
 // Start Server
