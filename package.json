@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "source .env && nodemon dist/app.js",
+    "run": "source .env && nodemon dist/app.js",
+    "start": "node dist/app.js",
     "postinstall": "gulp build-dev && build-client"
   },
   "dependencies": {
