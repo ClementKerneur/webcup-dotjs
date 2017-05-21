@@ -10,9 +10,15 @@ class ParkStarWorld extends React.Component {
 		  window.document && window.document.createElement)
 		);
 
-  	if(canUseDOM) {
-  		runStarWorld()
-  	}
+    if(canUseDOM) {
+      this.setState({
+        game: runStarWorld()
+      });
+    }
+  }
+
+  componentWillUnmount() {
+    this.state.game.destroy()
   }
 
   render() {
