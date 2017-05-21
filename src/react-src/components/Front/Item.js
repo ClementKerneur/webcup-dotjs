@@ -1,5 +1,6 @@
 import React from 'react'
 import Sound from 'react-sound'
+import { browserHistory } from 'react-router-dom'
 
 class FrontItem extends React.Component {
 
@@ -15,6 +16,15 @@ class FrontItem extends React.Component {
       isActive: true,
       isSoundPlayed: "PLAYING"
     })
+  }
+
+  handleClick () { 
+
+    console.log(this.props)
+
+
+
+    this.props.history.push(this.props.url)
   }
 
   constructor(props) {
@@ -38,16 +48,20 @@ class FrontItem extends React.Component {
     }
 
     return (
-      <div className={'column '+this.props.name+' '+activeclass} onMouseEnter={this.handleActive.bind(this)} onMouseLeave={this.handleDesactive.bind(this)}>
-        <Sound url="/static/audio/beep.mp3" playStatus={this.state.isSoundPlayed} />
-        <span>
-          <audio id="beep" preload="auto">
-              <source src="beep.mp3" />
-          </audio>          
-          <div className={this.props.world+'-img world-svg'}>
-              <center><img src={'/static/images/front/'+this.props.world+'.svg'} /></center>
-          </div>
-        </span>
+      <div 
+        className={'column '+this.props.name+' '+activeclass} 
+        onMouseEnter={this.handleActive.bind(this)} 
+        onMouseLeave={this.handleDesactive.bind(this)}
+        onClick={this.handleClick.bind(this)}>
+          <Sound url="/static/audio/beep.mp3" playStatus={this.state.isSoundPlayed} />
+          <span>
+            <audio id="beep" preload="auto">
+                <source src="beep.mp3" />
+            </audio>          
+            <div className={this.props.world+'-img world-svg'}>
+                <center><img src={'/static/images/front/'+this.props.world+'.svg'} /></center>
+            </div>
+          </span>
       </div>
     )
   }

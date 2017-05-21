@@ -22,14 +22,16 @@ class FrontPage extends React.Component {
   	}, 3000 );
   }
 
+
   render() {
+    console.log(this.props)
     return (
       <div id='wrap'>
         <ReactAudioPlayer src="/static/audio/background.mp3" autoPlay />
-      	<FrontItem name="w1" world="starworld" />
-      	<FrontItem name="w2" world="mordor" />
-      	<FrontItem name="w3" world="pandora" />
-      	<FrontItem name="w4" world="vote" />
+      	<FrontItem name="w1" world="starworld" url="/parks/starworld" history={this.props.history} />
+      	<FrontItem name="w2" world="mordor" url="/parks/mordor"  history={this.props.history} />
+      	<FrontItem name="w3" world="pandora" url="/parks/pandora"  history={this.props.history} />
+      	<FrontItem name="w4" world="vote" url="/parks/vote"  history={this.props.history} />
       </div>
     )
   }

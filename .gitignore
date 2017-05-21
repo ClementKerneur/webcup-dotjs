@@ -2,3 +2,5 @@ node_modules
 dist
 .env
 public/bundle.js
+tmp
+npm-debug.log
