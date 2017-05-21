@@ -179,12 +179,10 @@
     this.game.state.add('pageOne', pageOneState);
     this.game.state.add('boot', {
       preload: function() {
-        console.log('fgfdg');
         game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
         game.scale.compatibility.scrollTo = false;
         this.game.load.image("cp", "/static/parks/chooseguide/pandora/assets/cp.png");
         this.game.load.image("disk", "/static/parks/chooseguide/pandora/assets/disk.png");
-        this.game.load.image("starship", "/static/parks/chooseguide/pandora/assets/starship.png");
         this.game.load.image("starworld", "/static/parks/chooseguide/pandora/assets/starworld.png");
         this.game.load.image("vader", "/static/parks/chooseguide/pandora/assets/vader.png");
         this.game.load.image("yoda", "/static/parks/chooseguide/pandora/assets/yoda.png");
@@ -205,8 +203,7 @@
         return this.game.state.start("pageZero");
       }
     });
-    this.game.state.start("boot");
-    return this.game;
+    return this.game.state.start("boot");
   };
 
 }).call(this);

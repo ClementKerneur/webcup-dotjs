@@ -49,4 +49,4 @@
 
 	@game.state.start("boot")
 
-	return @game
+	@game
