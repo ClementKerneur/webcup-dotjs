@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <audio><source src="beep.mp3"></source></audio>
+    <title>ANDROID LAND</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="sidebar span4">
+        <div class="icon-bar">
+            <a href="index.html" id="home"><i class="fa fa-home"></i></a>
+            <a href="about.html" id="about"><i class="fa fa-map"></i></a>
+            <a href="starworld.html" id="starworld"><i class="fa fa-globe starworld"></i></a>
+            <a href="mordor.html" id="mordor"><i class="fa fa-globe mordor"></i></a>
+            <a href="pandora.html" id="pandora"><i class="fa fa-globe pandora"></i></a>
+            <a href="#" id="vote"><i class="fa fa-star"></i></a>
+            <a href="register.html" id="book"><i class="fa fa-ticket"></i></a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <a href="starworld/index.html">
+                <div class="col-md-4 map">
+                    <center><img class="map-hov" src="images/starwars_map.svg"></center>
+                </div>
+                </a>
+                <a href="mordor/index.html">
+                <div class="col-md-4 map">
+                    <center><img class="map-hov" src="images/mordo_map.svg"></center>
+                </div>
+                </a>
+                <a href="avatar/index.html">
+                <div class="col-md-4 map">
+                    <center><img class="map-hov" src="images/pandora_map.svg"></center>
+                </div>
+                </a>
+            </div>
+            <div class="message">
+            </div>
+            <div class="row-fluid bbandroid">
+                <div class="sand"></div>
+                <div class="bb8">
+                    <div class="antennas">
+                        <div class="antenna short"></div>
+                        <div class="antenna long"></div>
+                    </div>
+                    <div class="head">
+                        <div class="stripe one"></div>
+                        <div class="stripe two"></div>
+                        <div class="eyes">
+                            <div class="eye one"></div>
+                            <div class="eye two"></div>
+                        </div>
+                        <div class="stripe three"></div>
+                    </div>
+                    <div class="ball">
+                        <div class="lines one"></div>
+                        <div class="lines two"></div>
+                        <div class="ring one"></div>
+                        <div class="ring two"></div>
+                        <div class="ring three"></div>
+                    </div>
+                    <div class="shadow"></div>
+                </div>
+                <div class="shameless">
+                    <a href="https://codepen.io/mdixondesigns/" target="_blank">Mike Dixon</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script>
+        $(".map-hov").hover(function() {
+            $(this).css("cursor", "pointer");
+        });
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
