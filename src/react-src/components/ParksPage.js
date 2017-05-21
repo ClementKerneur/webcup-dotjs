@@ -6,6 +6,10 @@ import Pandora from './Parks/Pandora'
 import Mordor from './Parks/Mordor'
 import Vote from './Parks/Vote'
 
+// import StarWorldPresentation from './Parks/StarWorldPresentation'
+// import PandoraPresentation from './Parks/PandoraPresentation'
+import MordorPresentation from './Parks/MordorPresentation'
+
 class ParksPage extends React.Component {
 
   render() {
@@ -16,6 +20,8 @@ class ParksPage extends React.Component {
         <Route path={`${this.props.match.url}/starworld`} component={StarWorld} />
         <Route path={`${this.props.match.url}/vote`} component={Vote} />
 
+        <Route path={`${this.props.match.url}/mordor-presentation`} component={MordorPresentation} />
+        
       </div>
     )
   }
