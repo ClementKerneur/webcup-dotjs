@@ -18,6 +18,17 @@ const UserSchema = mongoose.Schema({
   password: {
     type: String,
     required: true
+  },
+  orders: {
+    type: Array
+  },
+  credits: {
+    type: Number,
+    default: 15
+  },
+  stripe_customerid: {
+    type: String,
+    required: true
   }
 });
 
