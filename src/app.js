@@ -50,14 +50,14 @@ require('./config/passport')(passport);
 
 app.use('/users', users);
 
-//SSR React
-app.get('*', (req, res) => {
-	ejs.renderFile('html.tpl', {
-		content: ReactDOMServer.renderToString( <StaticRouter location={req.url} context={{}}><Router /></StaticRouter> )
-	}, (err, html) => {
-		res.send(html);
-	})
-});
+////SSR React : Helas Qu'on a du abandoner :(
+// app.get('*', (req, res) => {
+// 	ejs.renderFile('html.tpl', {
+// 		content: ReactDOMServer.renderToString( <StaticRouter location={req.url} context={{}}><Router /></StaticRouter> )
+// 	}, (err, html) => {
+// 		res.send(html);
+// 	})
+// });
 
 // Start Server
 app.listen(port, () => {
