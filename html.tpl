@@ -8,6 +8,7 @@
 	<script type="text/javascript" src="/static/parks/chooseguide/lib/phaser/phaser.min.js"></script>
 	<script type="text/javascript" src="/static/parks/chooseguide/pandora/build/game.js"></script>
 	<script type="text/javascript" src="/static/parks/chooseguide/starworld/build/game.js"></script>
+	<script type="text/javascript" src="/static/parks/chooseguide/mordor/build/game.js"></script>
 </head>
 <body>
 	<div id="root"><%- content %></div>

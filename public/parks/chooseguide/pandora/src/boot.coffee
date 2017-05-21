@@ -8,16 +8,13 @@
 	@game.state.add 'pageZero', pageZeroState
 	@game.state.add 'pageOne', pageOneState
 	@game.state.add 'boot',
+
 		preload: ->
-
-			console.log('fgfdg');
-
 			game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL
 			game.scale.compatibility.scrollTo = false
 
 			@game.load.image("cp","/static/parks/chooseguide/pandora/assets/cp.png")
 			@game.load.image("disk","/static/parks/chooseguide/pandora/assets/disk.png")
-			@game.load.image("starship","/static/parks/chooseguide/pandora/assets/starship.png")
 			@game.load.image("starworld","/static/parks/chooseguide/pandora/assets/starworld.png")
 			@game.load.image("vader","/static/parks/chooseguide/pandora/assets/vader.png")
 			@game.load.image("yoda","/static/parks/chooseguide/pandora/assets/yoda.png")
@@ -33,6 +30,14 @@
 
 			@game.load.audio("selectSound","/static/parks/chooseguide/pandora/assets/Swoosh.mp3")
 			@game.load.audio("avatarSound","/static/parks/chooseguide/pandora/assets/avatarSound.mp3")
+
+			
+
+
+
+
+
+			
 			
 		create: ->
 			game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -44,5 +49,3 @@
 
 
 	@game.state.start("boot")
-
-	return @game
